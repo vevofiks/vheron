@@ -5,7 +5,7 @@ export default function VheronStory() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeFeature, setActiveFeature] = useState(0);
   const [isHoveringBottle, setIsHoveringBottle] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
