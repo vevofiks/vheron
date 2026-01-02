@@ -24,7 +24,7 @@ export const PRODUCTS: Product[] = [
     name: 'Essence No. 1',
     collection: 'Signature Series',
     price: '$180',
-    image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800',
+    image: '/assets/1.png',
     description: 'A delicate blend of bergamot and white musk.'
   },
   {
@@ -32,7 +32,7 @@ export const PRODUCTS: Product[] = [
     name: 'Midnight Bloom',
     collection: 'Nocturnal Collection',
     price: '$210',
-    image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800',
+    image: '/assets/2.webp',
     description: 'Rich jasmine intertwined with deep patchouli notes.'
   },
   {
@@ -40,7 +40,7 @@ export const PRODUCTS: Product[] = [
     name: 'Solar Dew',
     collection: 'Luminous Line',
     price: '$165',
-    image: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800',
+    image: '/assets/3.webp',
     description: 'Fresh citrus paired with warm cedarwood undertones.'
   },
 ];

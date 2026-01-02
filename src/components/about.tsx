@@ -45,12 +45,13 @@ const AboutSection: React.FC = () => {
                 >
                     <div className="relative aspect-[4/5] w-full max-w-md mx-auto">
                         <Image
-                            width={50}
-                            height={80}
+                            width={800}
+                            height={1000}
                             src="https://images.unsplash.com/photo-1557170334-a9632e77c6e4?auto=format&fit=crop&q=80&w=800"
                             alt="Nature extraction"
                             className="w-full h-full object-cover rounded-sm shadow-2xl"
                         />
+
                         {/* Decorative frame */}
                         <div className="absolute -inset-6 border border-[#fefae0]/10 pointer-events-none translate-x-4 translate-y-4" />
                     </div>
