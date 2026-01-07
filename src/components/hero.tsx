@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
-const Hero: React.FC = () => {
+export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -22,7 +22,13 @@ const Hero: React.FC = () => {
   const bottleRotate = useTransform(scrollYProgress, [0.25, 0.45], [-6, 0]);
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh]">
+    <section
+      ref={sectionRef}
+      className="
+        relative
+        h-[220vh] sm:h-[260vh] lg:h-[300vh]
+      "
+    >
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden bg-[#5E7F57]">
 
         {/* depth overlay */}
@@ -33,15 +39,35 @@ const Hero: React.FC = () => {
 
         {/* TYPOGRAPHY */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center pointer-events-none">
-          <h1 className="text-[13vw] font-serif tracking-wide leading-[0.85] text-[#F5F1E8]/85">
+          <h1
+            className="
+              font-serif tracking-wide leading-[0.85]
+              text-[11vw] sm:text-[12vw] lg:text-[13vw]
+              text-[#F5F1E8]/85
+            "
+          >
             SENSES WITH
           </h1>
 
-          <h2 className="text-[19vw] font-serif leading-[0.75] -mt-[2vw] text-[#F5F1E8]">
+          <h2
+            className="
+              font-serif leading-[0.75]
+              -mt-[3vw] sm:-mt-[2.5vw] lg:-mt-[2vw]
+              text-[16vw] sm:text-[17vw] lg:text-[19vw]
+              text-[#F5F1E8]
+            "
+          >
             VHERON
           </h2>
 
-          <h3 className="text-[14vw] font-serif leading-[0.8] -mt-[1vw] text-[#F5F1E8]/70">
+          <h3
+            className="
+              font-serif leading-[0.8]
+              -mt-[2vw] sm:-mt-[1.5vw] lg:-mt-[1vw]
+              text-[12vw] sm:text-[13vw] lg:text-[14vw]
+              text-[#F5F1E8]/70
+            "
+          >
             FRAGRANCES
           </h3>
         </div>
@@ -49,7 +75,12 @@ const Hero: React.FC = () => {
         {/* FLOWER */}
         <motion.div
           style={{ opacity: flowerOpacity, scale: flowerScale }}
-          className="absolute z-20 w-[32vw] max-w-[420px] translate-y-[6vh]"
+          className="
+            absolute z-20
+            w-[60vw] sm:w-[42vw] lg:w-[32vw]
+            max-w-[300px] sm:max-w-[360px] lg:max-w-[420px]
+            translate-y-[8vh] sm:translate-y-[7vh] lg:translate-y-[6vh]
+          "
         >
           <Image
             src="/assets/redflower.png"
@@ -67,7 +98,12 @@ const Hero: React.FC = () => {
             scale: bottleScale,
             rotate: bottleRotate,
           }}
-          className="absolute z-30 w-[26vw] max-w-[360px] translate-y-[-2vh]"
+          className="
+            absolute z-30
+            w-[46vw] sm:w-[34vw] lg:w-[26vw]
+            max-w-[260px] sm:max-w-[320px] lg:max-w-[360px]
+            translate-y-[-4vh] sm:translate-y-[-3vh] lg:translate-y-[-2vh]
+          "
         >
           <Image
             src="/assets/WhatsApp_Image_2025-12-22_at_21.51.11-removebg-preview.png"
@@ -84,4 +120,3 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;

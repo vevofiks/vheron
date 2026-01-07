@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      {/* ================= DESKTOP LEFT NAV ================= */}
+      {/* DESKTOP LEFT NAV */}
       <aside
         className="
           fixed left-0 top-0 h-screen w-[90px]
@@ -18,74 +18,61 @@ const Navbar: React.FC = () => {
           text-white/40
         "
       >
-        {/* Menu icon */}
         <button
           onClick={() => setOpen(true)}
           aria-label="Open menu"
-          className="transition hover:text-white/90"
+          className="hover:text-white transition"
         >
           <Menu size={30} />
         </button>
 
-        {/* Brand */}
         <a
           href="#hero"
           className="
             rotate-90 tracking-[0.45em]
             text-3xl font-serif-elegant
-            text-[#D4AF37]/45
-            transition hover:text-[#D4AF37]/90
+            text-[#D4AF37]/60
+            hover:text-[#D4AF37]
+            transition
           "
         >
           VHERON
         </a>
 
-        {/* WhatsApp */}
         <a
           href="https://wa.me/6282699250"
           target="_blank"
           rel="noopener noreferrer"
-          className="
-            text-xs tracking-widest
-            opacity-40 transition hover:opacity-90
-          "
+          className="text-xs tracking-widest opacity-40 hover:opacity-90 transition"
         >
           WhatsApp
         </a>
       </aside>
 
-      {/* ================= MOBILE TOP NAV ================= */}
+      {/* MOBILE TOP NAV */}
       <nav
         className="
           fixed top-0 left-0 w-full md:hidden
           flex justify-between items-center
           px-6 py-4 z-50 backdrop-blur-sm
-          text-white/40
         "
       >
-        {/* Brand */}
         <a
           href="#hero"
-          className="
-            tracking-[0.35em] text-base font-light
-            text-[#D4AF37]/45
-            transition hover:text-[#D4AF37]/90
-          "
+          className="tracking-[0.35em] text-sm text-[#D4AF37]/70"
         >
           VHERON
         </a>
 
-        {/* Menu icon */}
         <button
           onClick={() => setOpen(true)}
           aria-label="Open menu"
-          className="transition hover:text-white/90"
+          className="hover:text-white transition"
         >
           <Menu size={28} />
         </button>
       </nav>
 
-      {/* Fullscreen Menu */}
       <MenuOverlay open={open} onClose={() => setOpen(false)} />
     </>
   );
